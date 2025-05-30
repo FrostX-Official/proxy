@@ -5,23 +5,59 @@
     <title>frost's image proxy</title>
     <style>
         body {
+            text-align: center;
+            display: block;
+            align-items: center;
             background-color: black;
-            color: white;
+            user-select: none;
+            -webkit-user-drag: none;
         }
 
         p {
+            color: pink;
             font-family: 'Courier New', Courier, monospace;
         }
+
+        img {
+            border: 3px pink solid;
+            user-select: none;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 5px;
+        }
+
+        .w {
+            position: absolute;
+            bottom: 0;
+            width: 20%;
+            background-image: 
+                linear-gradient(to right, indigo,rgb(37, 16, 77), indigo); 
+            border-radius: 4px;
+            animation: w 5s infinite;
+            margin: 30px;
+            padding: 5px;
+        }
+
+        @keyframes w {
+            0% { color: pink; }
+            50% { color: rgb(193, 145, 255); }
+            100% { color: pink; }
+            to {
+                background-position: 80vh;
+            }
+          }
+          
     </style>
 </head>
 <body>
     <p>Image:</p>
-    <img id="root" style="display: block; -webkit-user-select: none; user-select: none;" src="https://i.ibb.co/Psnch99V/opera-Nk6-Dt-X7iz1h-QMDv.png">
-    <script id="haha">
+    <img id="root" alt="Not found">
+    <a href="https://github.com/FrostX-Official/proxy/blob/main/index.html"><p class="w">Proxy by frostxoff</p></a>
+    <script id="script">
         let s = window.location.href.split("?");
         let r = s[s.length-1];
-        document.getElementById("root").setAttribute("src", "https://i.ibb.co/"+r)
-        document.getElementById("haha").remove()
+        document.getElementById("root").setAttribute("src", "https://i.ibb.co/"+r) // this "proxy" site is basically just imgbb embedder
+        document.getElementById("script").remove()
     </script>
 </body>
 </html>
