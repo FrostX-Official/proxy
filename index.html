@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>frost's image proxy</title>
+    <style>
+        * {
+            background-color: black;
+        }
+
+        #root {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img id="root" style="display: block; -webkit-user-select: none; user-select: none;" src="https://i.ibb.co/Psnch99V/opera-Nk6-Dt-X7iz1h-QMDv.png">
+    <script id="haha">
+        let s = window.location.href.split("?");
+        let r = s[s.length-1];
+        document.getElementById("root").setAttribute("src", "https://i.ibb.co/"+r)
+        document.getElementById("haha").remove()
+    </script>
+</body>
+</html>
