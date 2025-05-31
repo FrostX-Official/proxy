@@ -6,32 +6,35 @@
     <style>
         body {
             text-align: center;
-            display: block;
-            align-items: center;
             background-color: black;
             user-select: none;
             -webkit-user-drag: none;
         }
 
         p {
+            display: block;
             color: pink;
             font-family: 'Courier New', Courier, monospace;
         }
 
-        img {
+        #root {
             border: 3px pink solid;
             user-select: none;
             color: white;
             font-family: 'Courier New', Courier, monospace;
             padding: 5px;
+
+            max-height: 89vh;
+            max-width: 89vw;
+
+            object-fit: contain;
         }
 
         .w {
             position: absolute;
             bottom: 0;
             width: 20%;
-            background-image: 
-                linear-gradient(to right, indigo,rgb(37, 16, 77), indigo); 
+            background-image: linear-gradient(to right, indigo,rgb(37, 16, 77), indigo); 
             border-radius: 4px;
             animation: w 5s infinite;
             margin: 30px;
@@ -42,17 +45,14 @@
             0% { color: pink; }
             50% { color: rgb(193, 145, 255); }
             100% { color: pink; }
-            to {
-                background-position: 80vh;
-            }
-          }
-          
+            to { background-position: 80vh; }
+        }
     </style>
 </head>
 <body>
     <p>Image:</p>
     <img id="root" alt="Not found">
-    <a href="https://github.com/FrostX-Official/proxy/blob/main/index.html"><p class="w">Proxy by frostxoff</p></a>
+    <a href="https://github.com/FrostX-Official/proxy"><p class="w">Proxy by frostxoff</p></a>
     <script id="script">
         let s = window.location.href.split("?");
         let r = s[1];
